@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-         copy: {
+        copy: {
             html: {
                 files: [
                 {
@@ -125,7 +125,7 @@ module.exports = function (grunt) {
             dist: {}
         },
 
-        // Filerev
+        // File revision
         filerev: {
             options: {
                 encoding: 'utf8',
