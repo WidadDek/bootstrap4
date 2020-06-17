@@ -33,7 +33,7 @@
                         <span class="fa fa-address-card  fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginBtn">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -117,21 +117,23 @@
                             </div>
                             <div class="form-group row">
                                 <label for="section" class="col-md-2 col-form-label">Section</label>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-success text-white active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
-                                    </label>
-                                    <label class="btn btn-danger text-white">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
-                                    </label>                               
+                                <div class="col-md-10">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-success text-white active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                        </label>
+                                        <label class="btn btn-danger text-white">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                        </label>                               
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="date&time" class="col-md-2 col-form-label">Date and Time</label>
-                                <div class="col-sm-5">
+                                <div class="col-md-5">
                                     <input type="text" class="form-control" id="date" name="date" placeholder="Date">
                                 </div>
-                                <div class="col-sm-5">
+                                <div class="col-md-5">
                                     <input type="text" class="form-control" id="time" name="time" placeholder="Time">
                                 </div>                            
                             </div>
@@ -157,7 +159,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reservationModal">Reserve Table
+                    <a role="button" class="btn btn-block nav-link btn-warning" id="reserveBtn">Reserve Table
                     </a>          
                 </div>
             </div>
@@ -328,6 +330,12 @@
                     $("#carouselButton").children("span").addClass('fa-pause');       
                 }
             }); 
+            $("#reserveBtn").click(function() {
+                $("#reservationModal").modal();
+            });
+            $("#loginBtn").click(function() {
+                $("#loginModal").modal();
+            })        
         });
 
     </script>
